@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     empPayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
-        localStorage.remove('editEmp');
+        localStorage.removeItem('editEmp');
 });
 
 const getEmployeePayrollDataFromStorage = () => {
