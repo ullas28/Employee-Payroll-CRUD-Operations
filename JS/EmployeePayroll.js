@@ -10,13 +10,13 @@ class EmployeePayrollData {
         this.notes = params[6];
     }
 
-    // get id() {
-    //     return this._id;
-    // }
+    get id() {
+        return this._id;
+    }
 
-    // set id(id) {
-    //     this._id = id;
-    // }
+    set id(id) {
+        this._id = id;
+    }
 
     get name() {
         return this._name;
@@ -87,10 +87,9 @@ class EmployeePayrollData {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const empDate = !this.startdate ? "undefined" :
             this.startdate.toLocaleDateString("en-US", options);
-        return  'Name = ' + this.name + ", Gender = " + this.gender + ", ProfileImage = " + this.profileImage
+        return  'ID = ' + this.id + 'Name = ' + this.name + ", Gender = " + this.gender + ", ProfileImage = " + this.profileImage
             + ", Department = " + this.department + ", Salary = " + this.salary +
             ", StartDate = " + empDate + ", Note = " + this.notes;
     }
 }
 
-//'ID = ' + this.id +
